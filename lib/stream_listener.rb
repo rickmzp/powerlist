@@ -52,7 +52,6 @@ class StreamListener
   def find_metadata(buffer)
     line = buffer.inspect
     extract = line.scan /StreamTitle=([^;]*)/
-    puts extract.inspect
     if extract.present?
       extract.first.first
     else
